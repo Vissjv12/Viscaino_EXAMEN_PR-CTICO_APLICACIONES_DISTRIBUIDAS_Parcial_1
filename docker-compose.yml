@@ -1,0 +1,13 @@
+services:
+  servidor:
+    image: python:3.11-alpine
+    volumes:
+      - .:/app
+    working_dir: /app
+    command: python 09_web_servidor.py
+    stdin_open: true
+    tty: true
+    ports:
+      - "8767:8767"
+      #cambiar si lo puertos estan ocupados
+
